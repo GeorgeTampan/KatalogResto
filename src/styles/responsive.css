@@ -1,0 +1,106 @@
+.posts {
+    display: grid;
+    grid-row-gap: 16px;
+  }
+
+@media screen and (max-width: 499px) {
+
+  .header__menu{
+    margin-right: 10%;
+    min-width: 44px; 
+    min-height:44px;
+    color: #F0F0F0;
+    font-weight: 700;
+    font-size: 36px;
+    text-decoration: none;
+  }
+
+  .nav {
+    margin-top: 65%;
+    z-index: 10;
+    background-color: #fff;
+    width: 350px;
+    position: absolute;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-500px, 0);
+    transform: translate(-500px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .nav__item {
+    display: list-item;
+    border-bottom: 2px solid #18122B;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  .nav__item a{
+    color: #18122B;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+
+  .post-item__content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .post-item__title {
+    font-size: 18px;
+  }
+
+  .post-item__description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav__list {
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+}
